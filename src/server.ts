@@ -9,6 +9,7 @@ const { ApolloServer, AuthenticationError } = require("apollo-server-express");
 const server = new ApolloServer({
 	typeDefs: schemas,
 	resolvers,
+	introspection: true,
 	playground: true,
 	formatError: (error: any) => {
 		// remove the internal sequelize error message
