@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "node": "node",
-    "start": "npm run serve",
+	"start": "npm run serve",
+	"build": " npm run build-ts",
+	"build-ts": "tsc",
     "serve": "node dist/server.js",
     "test": "set NODE_ENV=test&&jest",
     "watch-node": "nodemon src/server.ts"
