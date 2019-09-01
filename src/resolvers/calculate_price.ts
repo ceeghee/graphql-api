@@ -9,7 +9,8 @@ export default {
 			{type, margin, exchangeRate},
 			{}
 		) => {
-				return await calculatePrice(type, margin, exchangeRate);
+				const inputType = type.buyorsel;
+				return await calculatePrice(inputType, margin, exchangeRate);
 		}
 	}
 };
