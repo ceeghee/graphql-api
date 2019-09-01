@@ -7,7 +7,7 @@
     "node": "node",
     "start": "npm run serve",
     "serve": "node dist/server.js",
-    "test": "npm test",
+    "test": "set NODE_ENV=test&&jest",
     "watch-node": "nodemon src/server.ts"
   },
   "author": "goodluck ekene",
@@ -25,7 +25,11 @@
   "devDependencies": {
     "@types/express": "^4.17.1",
     "@types/graphql-resolvers": "^0.2.2",
+    "@types/jest": "^24.0.18",
     "@types/jsonwebtoken": "^8.3.3",
+    "graphql-request": "^1.8.2",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
     "tslint": "^5.19.0",
     "typescript": "^3.6.2"
   }
