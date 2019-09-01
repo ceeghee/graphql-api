@@ -8,8 +8,8 @@ export const calculatePrice = async(
 		const btc_usd_rate = await getExchangeRate();
 		const priceMargin = await getPriceMargin(type, margin, btc_usd_rate);
 
-		const ngnPrice = exchangeRate * priceMargin;
-		return ngnPrice.toFixed(2);
+		const ngnPrice: number = exchangeRate * priceMargin;
+		return Number(ngnPrice.toFixed(2));
 };
 
 export const getExchangeRate = async(): Promise<number> => {
