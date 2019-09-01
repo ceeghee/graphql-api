@@ -9,6 +9,7 @@ const { ApolloServer, AuthenticationError } = require("apollo-server-express");
 const server = new ApolloServer({
 	typeDefs: schemas,
 	resolvers,
+	playground: true,
 	formatError: (error: any) => {
 		// remove the internal sequelize error message
 		// leave only the important validation error
@@ -31,11 +32,8 @@ const server = new ApolloServer({
 
 const path = "/graphiql";
 
-// app.use(query());
 server.applyMiddleware({ app, path });
-/**
- * Error Handler. Provides full stack - remove for production
- */
+
 
 const AppServer = app.listen({ port: app.get("port") }, () =>
 	console.log(`🚀 GraphQl Server running at http://localhost:${app.get("port")}` + `${server.graphqlPath}`)
