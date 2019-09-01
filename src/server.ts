@@ -42,4 +42,5 @@ const AppServer = app.listen({ port: app.get("port") }, () =>
 );
 
 
-export default server;
+
+export default AppServer;
